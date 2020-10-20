@@ -33,3 +33,7 @@ Route::post('allocate/store', 'AllocateController@store')->name('allocate/store'
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
