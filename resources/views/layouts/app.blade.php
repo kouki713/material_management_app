@@ -79,6 +79,11 @@
                 <h3>{{ session('message') }}</h3>
             </div>
             @endif
+            @if (Session::has('alert'))
+            <div class="alert alert-danger text-center">
+                <h3>{{ session('alert') }}</h3>
+            </div>
+            @endif
 
             <div class="container">
                 <div class="row">

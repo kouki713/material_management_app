@@ -52,10 +52,15 @@ class ReceiptController extends Controller
         
         // 未入庫個数
         $num = $i - $number;
-        dd($num);
 
-        $receipt->save();
 
-        return redirect('receipt/index')->with('message', '入庫しました。');
+        if ($receipt->num <= $num) {
+            $receipt->save();
+            return redirect('receipt/index')->with('message', '入庫しました。');
+        }else{
+            return redirect('receipt/index')->with('alert', '入力内容を確認してください。');
+        }
+        
+            
     }
 }
