@@ -31,6 +31,6 @@ class PurchaseController extends Controller
         $purchase->item_id = $request->input('item_id');
         $purchase->save();
 
-        return redirect('purchase/index')->with('message', '発注しました。');
+        return back()->with('message', '発注しました。');
     }
 }

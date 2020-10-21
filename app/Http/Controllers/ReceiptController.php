@@ -24,7 +24,24 @@ class ReceiptController extends Controller
     public function create($id) {
         $item = Item::find($id); 
 
-        return view('receipts.create', compact('item'));
+        //入庫する部材に紐付いている発注個数の合計を求める
+        $purchases = $item->purchases;
+        $i = 0;
+        foreach($purchases as $purchase) {
+            $i = $i + $purchase->num; 
+        };
+
+        //入庫済み個数を求める
+        $receipts = $item->receipts;
+        $number = 0;
+        foreach($receipts as $rec) {
+            $number = $number + $rec->num; 
+        };
+        
+        // 未入庫個数
+        $num = $i - $number;
+
+        return view('receipts.create', compact('item', 'num'));
     }
 
     public function store(Request $request) {
@@ -56,9 +73,9 @@ class ReceiptController extends Controller
 
         if ($receipt->num <= $num) {
             $receipt->save();
-            return redirect('receipt/index')->with('message', '入庫しました。');
+            return back()->with('message', '入庫しました。');
         }else{
-            return redirect('receipt/index')->with('alert', '入力内容を確認してください。');
+            return back()->with('alert', '入力個数を確認してください。');
         }
         
             

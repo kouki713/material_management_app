@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h3>部材発注一覧</h3>
+            <h3>部材発注履歴一覧</h3>
         </div>
     </div>
 </div>

@@ -22,7 +22,6 @@
                     </form>
                 </div>
             </div>
-            <a href="{{route('item.index')}}">部材一覧へ</a>
         </div>
     </div>
 </div>

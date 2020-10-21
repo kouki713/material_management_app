@@ -13,13 +13,15 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th>{{ $item->item_name }}</th>
+                                <td>{{ $item->item_name }}</th>
                                 <td><input type="number" name="num" style="width:80%;" min="1" max="1000"> 個</td>
+                                <td>未入庫　{{ $num }} 個</td>
                             </tr>
                         </tbody>
                     </table>
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
-                    <input type="submit" class="btn btn-info" value="入庫">
+
+                    <input type="submit" class="btn btn-info text-right" value="入庫">
                     </form>
                 </div>
             </div>
