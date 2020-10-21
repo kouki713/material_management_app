@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Allocate;
+use App\Models\Item;
 
 use Illuminate\support\Facades\DB;
 

@@ -73,7 +73,28 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <!-- エラーメッセージ・フラッシュメッセージ -->
+            @if (Session::has('message'))
+            <div class="alert alert-success text-center">
+                <h3>{{ session('message') }}</h3>
+            </div>
+            @endif
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4 style="margin-top: 50px;"><a href="{{route('item.index')}}">部材一覧</a></h4>
+                        <h4 style="margin-top: 20px;"><a href="{{route('purchase.index')}}">発注一覧</a></h4>
+                        <h4 style="margin-top: 20px;"><a href="{{route('receipt.index')}}">入庫一覧</a></h4>
+                        <h4 style="margin-top: 20px;"><a href="{{route('allocate.index')}}">割当一覧</a></h4>
+                        <h4 style="margin-top: 20px;"><a href="{{route('item.create')}}">部材新規登録</a></h4>
+                    </div>
+                    <div class="col-md-10">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+            
         </main>
     </div>
 </body>
