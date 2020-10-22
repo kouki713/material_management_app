@@ -18,12 +18,12 @@
                             </tr>
                             <tr>
                                 <td>割当個数</td>
-                                <td><input type="number" name="num" style="width:90%;" min="1" max="1000"> 個</td>
+                                <td><input type="number" name="num" min="1" max="1000" class="form-control"></td>
                                 <td>（割当可能数:{{ $num }} 個）</td>
                             </tr>
                             <tr>
                                 <td>割当先名</td>
-                                <td><input type="text" name="name" style="width:90%;"></td>
+                                <td><input type="text" name="name" class="form-control"></td>
                                 <td></td>
                             </tr>
                         </tbody>

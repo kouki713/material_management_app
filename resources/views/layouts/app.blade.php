@@ -28,16 +28,20 @@
                     <p class="sidebar-title">{{ config('app.name', 'Laravel') }}</h4>
                 </a>
                 
-                <p class="menu-title">MENU</p>            
+                <p class="sidebar-menu-title">MENU</p>            
                 <h4 class="sidebar-menu"><a href="{{route('item.index')}}">部材一覧</a></h4>
                 <h4 class="sidebar-menu"><a href="{{route('purchase.index')}}">発注一覧</a></h4>
                 <h4 class="sidebar-menu"><a href="{{route('receipt.index')}}">入庫一覧</a></h4>
                 <h4 class="sidebar-menu"><a href="{{route('allocate.index')}}">割当一覧</a></h4>
                 <h4 class="sidebar-menu"><a href="{{route('item.create')}}">部材新規登録</a></h4>
-                @guest                           
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                @guest
+                    <h4 class="sidebar-menu">                           
+                        <a href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                    </h4>
                     @if (Route::has('register'))
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>   
+                        <h4 class="sidebar-menu">
+                            <a href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                        </h4>   
                     @endif
                 @else                               
                     <p class="user-name">{{ Auth::user()->name }}</p>

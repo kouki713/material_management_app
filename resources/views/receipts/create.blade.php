@@ -14,7 +14,7 @@
                         <tbody>
                             <tr>
                                 <td>{{ $item->item_name }}</th>
-                                <td><input type="number" name="num" style="width:80%;" min="1" max="1000"> 個</td>
+                                <td><input type="number" name="num" min="1" max="1000" class="form-control"></td>
                                 <td>未入庫　{{ $num }} 個</td>
                             </tr>
                         </tbody>

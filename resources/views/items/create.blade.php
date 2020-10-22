@@ -13,7 +13,7 @@
                         <tbody>
                             <tr>
                                 <th>部材名</th>
-                                <td><input type="text" name="item_name" style="width:100%;"></td>
+                                <td><input type="text" name="item_name" style="width:70%;" class="form-control"></td>
                             </tr>
                         </tbody>
                     </table>
