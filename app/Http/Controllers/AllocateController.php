@@ -13,7 +13,7 @@ use Illuminate\support\Facades\DB;
 class AllocateController extends Controller
 {
     public function index() {
-        $allocates = Allocate::all();
+        $allocates = Allocate::paginate(10);
 
         return view('allocates.index', compact('allocates'));
     }

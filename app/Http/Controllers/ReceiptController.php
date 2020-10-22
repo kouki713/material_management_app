@@ -15,7 +15,7 @@ use Illuminate\support\Facades\DB;
 class ReceiptController extends Controller
 {
     public function index() {
-        $receipts = Receipt::all();
+        $receipts = Receipt::paginate(10);
 
         return view('receipts.index', compact('receipts'));
 

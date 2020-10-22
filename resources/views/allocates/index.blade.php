@@ -31,6 +31,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div style="display:inline-block; padding: 20px 300px;">
+                        {{ $allocates->links() }}
+                    </div>
                 </div>
             </div>
         </div>

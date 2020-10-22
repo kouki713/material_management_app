@@ -13,7 +13,7 @@ class PurchaseController extends Controller
 {
     public function index() {
 
-        $purchases = Purchase::all();
+        $purchases = Purchase::paginate(10);
         // dd($purchases);
         return view('purchases.index', compact('purchases'));
     }
