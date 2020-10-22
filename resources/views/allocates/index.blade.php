@@ -11,9 +11,9 @@
                         <thead>
                             <tr>
                                 <th>部材名</th>
-                                <th>入庫日</th>
-                                <th>入庫個数</th>
                                 <th>割当先名</th>
+                                <th>割当個数</th>
+                                <th>割当日</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -24,9 +24,9 @@
                                             {{ $allocate->item->item_name }}
                                         </a>
                                     </td>
-                                    <td>{{ $allocate->created_at }}</td>
-                                    <td>{{ $allocate->num }}</td>
                                     <td>{{ $allocate->name }}</td>
+                                    <td>{{ $allocate->num }}</td>
+                                    <td>{{ $allocate->created_at }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

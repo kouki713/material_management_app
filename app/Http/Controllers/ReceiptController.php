@@ -8,7 +8,8 @@ use App\Models\Receipt;
 use App\Models\Item;
 use App\Models\Purchase;
 
-
+//バリデーション設定ファイルの読み込み
+use App\Http\Requests\StoreReceiptForm;
 
 use Illuminate\support\Facades\DB;
 
@@ -44,7 +45,7 @@ class ReceiptController extends Controller
         return view('receipts.create', compact('item', 'num'));
     }
 
-    public function store(Request $request) {
+    public function store(StoreReceiptForm $request) {
         $receipt = new Receipt;
 
         $receipt->num = $request->input('num');

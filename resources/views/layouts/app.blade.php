@@ -76,14 +76,23 @@
             <!-- エラーメッセージ・フラッシュメッセージ -->
             @if (Session::has('message'))
             <div class="alert alert-success text-center">
-                <h3>{{ session('message') }}</h3>
+                {{ session('message') }}
             </div>
             @endif
             @if (Session::has('alert'))
             <div class="alert alert-danger text-center">
-                <h3>{{ session('alert') }}</h3>
+                {{ session('alert') }}
             </div>
             @endif
+            @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
             <div class="container">
                 <div class="row">

@@ -8,6 +8,9 @@ use App\Models\Allocate;
 use App\Models\Item;
 use App\Models\Receipt;
 
+//バリデーション設定ファイルの読み込み
+use App\Http\Requests\StoreAllocateForm;
+
 use Illuminate\support\Facades\DB;
 
 class AllocateController extends Controller
@@ -41,7 +44,7 @@ class AllocateController extends Controller
         return view('allocates.create', compact('item', 'num'));
     }
 
-    public function store(Request $request) {
+    public function store(StoreAllocateForm $request) {
         $allocate = new Allocate;
 
         $allocate->num = $request->input('num');

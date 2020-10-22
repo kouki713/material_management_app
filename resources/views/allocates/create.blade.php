@@ -30,7 +30,7 @@
                     </table>
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
 
-                    <input type="submit" class="btn btn-info text-right" value="入庫">
+                    <input type="submit" class="btn btn-info text-right" value="割当">
                     </form>
                 </div>
             </div>

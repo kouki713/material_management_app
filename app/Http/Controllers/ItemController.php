@@ -9,6 +9,9 @@ use App\Models\Receipt;
 use App\Models\Purchase;
 use App\Models\Allocate;
 
+//バリデーション設定ファイルの読み込み
+use App\Http\Requests\StoreItemForm;
+
 use Illuminate\support\Facades\DB;
 
 class ItemController extends Controller
@@ -25,7 +28,7 @@ class ItemController extends Controller
         return view('items.create');
     }
 
-    public function store(Request $request) {
+    public function store(StoreItemForm $request) {
         $item = new Item;
 
         $item->item_name = $request->input('item_name');

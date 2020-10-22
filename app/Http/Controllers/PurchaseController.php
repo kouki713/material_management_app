@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Purchase;
 use App\Models\Item;
 
+//バリデーション設定ファイルの読み込み
+use App\Http\Requests\StorePurchaseForm;
+
 use Illuminate\support\Facades\DB;
 
 class PurchaseController extends Controller
@@ -23,7 +26,7 @@ class PurchaseController extends Controller
         return view('purchases.create', compact('item'));
     }
 
-    public function store(Request $request) {
+    public function store(StorePurchaseForm $request) {
 
         $purchase = new Purchase;
 
