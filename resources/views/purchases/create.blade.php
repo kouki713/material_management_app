@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">部材発注画面</div>
                 <div class="card-body">
@@ -23,36 +23,30 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container" style="margin-top: 50px;">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>発注履歴</h3>
-        </div>
-    </div>
-</div>
-<div class="container" >
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>部材名</th>
-                        <th>発注日</th>
-                        <th>発注個数</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($item->purchases as $purchase)
-                        <tr>
-                            <td>{{ $purchase->item->item_name }}</td>
-                            <td>{{ $purchase->created_at }}</td>
-                            <td>{{ $purchase->num }} 個</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="col-md-10" style="margin-top: 50px;">
+            <div class="card">
+                <div class="card-header">発注履歴</div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>部材名</th>
+                                <th>発注日</th>
+                                <th>発注個数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($item->purchases as $purchase)
+                                <tr>
+                                    <td>{{ $purchase->item->item_name }}</td>
+                                    <td>{{ $purchase->created_at }}</td>
+                                    <td>{{ $purchase->num }} 個</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -87,14 +87,20 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                        <h4 style="margin-top: 50px;"><a href="{{route('item.index')}}">部材一覧</a></h4>
-                        <h4 style="margin-top: 20px;"><a href="{{route('purchase.index')}}">発注一覧</a></h4>
-                        <h4 style="margin-top: 20px;"><a href="{{route('receipt.index')}}">入庫一覧</a></h4>
-                        <h4 style="margin-top: 20px;"><a href="{{route('allocate.index')}}">割当一覧</a></h4>
-                        <h4 style="margin-top: 20px;"><a href="{{route('item.create')}}">部材新規登録</a></h4>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-header">MENU</div>
+                            <div class="card-body">
+                                <h4 style="margin-top: 20px;"><a href="{{route('item.index')}}">・部材一覧</a></h4>
+                                <h4 style="margin-top: 20px;"><a href="{{route('purchase.index')}}">・発注一覧</a></h4>
+                                <h4 style="margin-top: 20px;"><a href="{{route('receipt.index')}}">・入庫一覧</a></h4>
+                                <h4 style="margin-top: 20px;"><a href="{{route('allocate.index')}}">・割当一覧</a></h4>
+                                <h4 style="margin-top: 20px;"><a href="{{route('item.create')}}">・部材新規登録</a></h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-10">
+                        
+                    <div class="col-md-9">
                         @yield('content')
                     </div>
                 </div>

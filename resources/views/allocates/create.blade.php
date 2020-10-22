@@ -35,38 +35,33 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container" style="margin-top: 50px;">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>割当履歴</h3>
-        </div>
-    </div>
-</div>
-<div class="container" >
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>部材名</th>
-                        <th>割当日</th>
-                        <th>割当個数</th>
-                        <th>割当先名</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($item->allocates as $allocate)
-                        <tr>
-                            <td>{{ $allocate->item->item_name }}</td>
-                            <td>{{ $allocate->created_at }}</td>
-                            <td>{{ $allocate->num }} 個</td>
-                            <td>{{ $allocate->name }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="col-md-10" style="margin-top: 50px;">
+        <div class="card">
+            <div class="card">
+                <div class="card-header">割当履歴</div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>部材名</th>
+                                <th>割当先名</th>
+                                <th>割当個数</th>
+                                <th>割当日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($item->allocates as $allocate)
+                                <tr>
+                                    <td>{{ $allocate->item->item_name }}</td>
+                                    <td>{{ $allocate->name }}</td>
+                                    <td>{{ $allocate->num }} 個</td>
+                                    <td>{{ $allocate->created_at }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

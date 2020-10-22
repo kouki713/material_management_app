@@ -71,7 +71,7 @@ class AllocateController extends Controller
 
         if ($allocate->num <= $num) {
             $allocate->save();
-            return back()->with('message', '資材を割当ました。');
+            return back()->with('message', '資材を割当てました。');
         }else{
             return back()->with('alert', '割当可能数を確認の上、割当個数を入力してください。');
         }
