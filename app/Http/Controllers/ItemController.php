@@ -36,7 +36,7 @@ class ItemController extends Controller
         
         $item->save();
         
-        return redirect('item/index')->with('message', '部材を登録しました。');
+        return redirect('/')->with('message', '部材を登録しました。');
     
     }
 }
