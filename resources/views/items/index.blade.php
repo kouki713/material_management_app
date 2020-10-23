@@ -38,13 +38,11 @@
                                             <?php $total_num2 = $total_num2 + $receipt->num ?>
                                         @endforeach
                                         {{ $total_num2 }}
-                                        <?php $total_num3 = $total_num - $total_num2 ?>
-                                        @if ($total_num3 != 0 )
-                                            <p><a href="{{ route('receipt.create', ['id' => $item->id]) }}">入庫</a></p>
-                                        @endif
+                                        <p><a href="{{ route('receipt.create', ['id' => $item->id]) }}">入庫</a></p>
                                     </td>
                                     <td>
                                         <!-- 未入庫数 -->
+                                        <?php $total_num3 = $total_num - $total_num2 ?>
                                         {{ $total_num3 }}
                                     </td>
                                     <td>
@@ -53,14 +51,12 @@
                                         @foreach($item->allocates as $allocate)
                                             <?php $total_num4 = $total_num4 + $allocate->num ?>
                                         @endforeach
-                                        {{ $total_num4 }}
-                                        <?php $total_num5 = $total_num2 - $total_num4 ?>
-                                        @if ($total_num5 != 0 )
-                                            <p><a href="{{ route('allocate.create', ['id' => $item->id]) }}">割当</a></p>
-                                        @endif
+                                        {{ $total_num4 }}                                      
+                                        <p><a href="{{ route('allocate.create', ['id' => $item->id]) }}">割当</a></p>
                                     </td>
                                     <td>
                                         <!-- 割当残数 -->
+                                        <?php $total_num5 = $total_num2 - $total_num4 ?>
                                         {{ $total_num5 }}
                                     </td>
                                 </tr>
