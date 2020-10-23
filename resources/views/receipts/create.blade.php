@@ -19,7 +19,7 @@
                         </tbody>
                     </table>
                     @if ($num <= 0) 
-                        <p class="num-alert">※入庫可能個数がありません</p>
+                        <p class="num-alert" style="color: red; text-align: center;">※入庫可能個数がありません</p>
                     @endif
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
 

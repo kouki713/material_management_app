@@ -3,9 +3,6 @@ html, body {
     height: 100%;
     margin:0 auto;
 }
-#app {
-    display: block;
-}
 
 main {
     width:80%;
@@ -19,6 +16,7 @@ float:right;
     margin: 100px auto;
 }
 
+/* サイドバー  */
 .sidebar {
     width:20%;
     min-height: 100vh;
@@ -28,31 +26,31 @@ float:right;
     top: 0;
     left: 0;
 }
-
 .sidebar-title {
     text-align: center;
     font-size: 30px;
     margin-top: 30px;
 }
-
 .sidebar-menu {
     margin-top: 25px;
     text-align: center; 
 }
-
 .sidebar-menu-title {
     text-align: center;
     font-size: 25px;
     color: gold;
     margin-top: 50px;
 }
-
 .user-name {
     text-align: center;
     font-size: 22px;
     margin-top: 30px;
 }
-
 .sidebar a {
     color: midnightblue;
+}
+
+.num-alert {
+    color: red;
+    text-align: center;
 }
