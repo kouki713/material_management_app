@@ -28,6 +28,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    @if ($num <= 0) 
+                        <p class="num-alert" style="color: red; text-align: center;">※割当可能個数がありません</p>
+                    @endif
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
 
                     <input type="submit" class="btn btn-info text-right" value="割当">
