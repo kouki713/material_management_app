@@ -74,9 +74,9 @@ class ReceiptController extends Controller
 
         if ($receipt->num <= $num) {
             $receipt->save();
-            return back()->with('message', '入庫しました。');
+            return back()->with('message', '入庫登録しました。');
         }else{
-            return back()->with('alert', '入力個数を確認してください。');
+            return back()->with('alert', '入庫可能個数を確認の上、個数を入力してください。');
         }
         
             
