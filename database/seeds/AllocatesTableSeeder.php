@@ -12,6 +12,6 @@ class AllocatesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Allocate::class, 300)->create();
+        factory(Allocate::class, 100)->create();
     }
 }

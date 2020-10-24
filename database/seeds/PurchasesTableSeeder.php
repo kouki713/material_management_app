@@ -12,11 +12,11 @@ class PurchasesTableSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 3; $i++) {
-            for ($n = 1; $n <= 15; $n++) {
+            for ($n = 1; $n <= 10; $n++) {
                 DB::table('purchases')->insert([
                     [
                         'item_id' => $i, 
-                        'num' => rand(1, 8) * 10,
+                        'num' => rand(1, 10) * 10,
                         'created_at' => now(),
                         'updated_at' => now(),
                     ],    
