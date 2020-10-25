@@ -23,9 +23,12 @@ class ItemController extends Controller
         
         return view('items.index', compact('items'));
     }
+    
 
     public function create() {
         return view('items.create');
+
+    
     }
 
     public function store(StoreItemForm $request) {
